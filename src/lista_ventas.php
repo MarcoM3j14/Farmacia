@@ -35,7 +35,8 @@ include_once "includes/header.php";
                             <td><?php echo $row['total']; ?></td>
                             <td><?php echo $row['fecha']; ?></td>
                             <td>
-                                <a href="pdf/generar.php?cl=<?php echo $row['id_cliente'] ?>&v=<?php echo $row['id'] ?>" target="_blank" class="btn btn-danger"><i class="fas fa-file-pdf"></i></a>
+                                <!--<a href="pdf/generar.php?cl=<?php echo $row['id_cliente'] ?>&v=<?php echo $row['id'] ?>" target="_blank" class="btn btn-danger"><i class="fas fa-file-pdf"></i></a>-->
+                                <a href="#" class="btn btn-danger"><i class="fas fa-file-pdf"></i></a>
                             </td>
                         </tr>
                     <?php } ?>
