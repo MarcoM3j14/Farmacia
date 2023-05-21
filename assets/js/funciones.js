@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     const res = JSON.parse(response);
                     if (response != 'error') {
                         Swal.fire({
-                            position: 'top-end',
+                            position: 'center',
                             icon: 'success',
                             title: 'Venta Generada',
                             showConfirmButton: false,
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         }, 300);
                     } else {
                         Swal.fire({
-                            position: 'top-end',
+                            position: 'center',
                             icon: 'error',
                             title: 'Error al generar la venta',
                             showConfirmButton: false,
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         } else {
             Swal.fire({
-                position: 'top-end',
+                position: 'center',
                 icon: 'warning',
                 title: 'No hay producto para generar la venta',
                 showConfirmButton: false,
@@ -156,7 +156,7 @@ function calcularDescuento(e, id) {
 
                 if (response.mensaje == 'descontado') {
                     Swal.fire({
-                        position: 'top-end',
+                        position: 'center',
                         icon: 'success',
                         title: 'Descuento Aplicado',
                         showConfirmButton: false,
@@ -225,7 +225,7 @@ function registrarDetalle(e, id, cant, precio) {
                         $("#producto").focus();
                         listar();
                         Swal.fire({
-                            position: 'top-end',
+                            position: 'center',
                             icon: 'success',
                             title: 'Producto Ingresado',
                             showConfirmButton: false,
@@ -238,7 +238,7 @@ function registrarDetalle(e, id, cant, precio) {
                         $("#producto").focus();
                         listar();
                         Swal.fire({
-                            position: 'top-end',
+                            position: 'center',
                             icon: 'success',
                             title: 'Producto Actualizado',
                             showConfirmButton: false,
@@ -251,7 +251,7 @@ function registrarDetalle(e, id, cant, precio) {
                         $("#producto").val('');
                         $("#producto").focus();
                         Swal.fire({
-                            position: 'top-end',
+                            position: 'center',
                             icon: 'error',
                             title: response,
                             showConfirmButton: false,
@@ -276,7 +276,7 @@ function deleteDetalle(id) {
 
             if (response == 'restado') {
                 Swal.fire({
-                    position: 'top-end',
+                    position: 'center',
                     icon: 'success',
                     title: 'Producto Descontado',
                     showConfirmButton: false,
@@ -287,7 +287,7 @@ function deleteDetalle(id) {
                 listar();
             } else if (response == 'ok') {
                 Swal.fire({
-                    position: 'top-end',
+                    position: 'center',
                     icon: 'success',
                     title: 'Producto Eliminado',
                     showConfirmButton: false,
@@ -298,7 +298,7 @@ function deleteDetalle(id) {
                 listar();
             } else {
                 Swal.fire({
-                    position: 'top-end',
+                    position: 'center',
                     icon: 'error',
                     title: 'Error al eliminar el producto',
                     showConfirmButton: false,
@@ -333,8 +333,9 @@ function calcular() {
 }
 
 function generarPDF(cliente, id_venta) {
-    url = 'pdf/generar.php?cl=' + cliente + '&v=' + id_venta;
-    window.open(url, '_blank');
+	//url = 'pdf/generar.php?cl=' + cliente + '&v=' + id_venta;
+    //window.open(url, '_blank');
+	url = "#"
 }
 if (document.getElementById("stockMinimo")) {
     const action = "sales";
@@ -416,7 +417,7 @@ function btnCambiar(e) {
     const nueva = document.getElementById('nueva').value;
     if (actual == "" || nueva == "") {
         Swal.fire({
-            position: 'top-end',
+            position: 'center',
             icon: 'error',
             title: 'Los campos estan vacios',
             showConfirmButton: false,
@@ -435,7 +436,7 @@ function btnCambiar(e) {
             success: function (response) {
                 if (response == 'ok') {
                     Swal.fire({
-                        position: 'top-end',
+                        position: 'center',
                         icon: 'success',
                         title: 'Contraseña modificado',
                         showConfirmButton: false,
@@ -445,7 +446,7 @@ function btnCambiar(e) {
                     $("#nuevo_pass").modal("hide");
                 } else if (response == 'dif') {
                     Swal.fire({
-                        position: 'top-end',
+                        position: 'center',
                         icon: 'error',
                         title: 'La contraseña actual incorrecta',
                         showConfirmButton: false,
@@ -453,7 +454,7 @@ function btnCambiar(e) {
                     })
                 } else {
                     Swal.fire({
-                        position: 'top-end',
+                        position: 'center',
                         icon: 'error',
                         title: 'Error al modificar la contraseña',
                         showConfirmButton: false,
