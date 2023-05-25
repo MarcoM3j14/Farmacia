@@ -6,7 +6,7 @@ $clientes = mysqli_query($conexion, "SELECT * FROM cliente");
 $total['clientes'] = mysqli_num_rows($clientes);
 $productos = mysqli_query($conexion, "SELECT * FROM producto");
 $total['productos'] = mysqli_num_rows($productos);
-$ventas = mysqli_query($conexion, "SELECT * FROM ventas WHERE fecha > CURDATE()");
+$ventas = mysqli_query($conexion, "SELECT * FROM ventas");
 $total['ventas'] = mysqli_num_rows($ventas);
 session_start();
 include_once "includes/header.php";

@@ -12,10 +12,10 @@ include_once "includes/header.php";
 ?>
 <div class="row">
     <div class="col-lg-12">
-        <div class="form-group">
-            <h4 class="text-center">Datos del Cliente</h4>
-        </div>
         <div class="card">
+            <div class="card-header bg-primary text-white text-center">
+                Datos del Cliente
+            </div>
             <div class="card-body">
                 <form method="post">
                     <div class="row">
