@@ -333,9 +333,8 @@ function calcular() {
 }
 
 function generarPDF(cliente, id_venta) {
-	//url = 'pdf/generar.php?cl=' + cliente + '&v=' + id_venta;
-    //window.open(url, '_blank');
-	url = "#"
+	url = 'pdf/generar.php?cl=' + cliente + '&v=' + id_venta;
+    window.open(url, '_blank');
 }
 if (document.getElementById("stockMinimo")) {
     const action = "sales";

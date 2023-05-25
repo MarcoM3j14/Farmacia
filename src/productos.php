@@ -92,7 +92,7 @@ include_once "includes/header.php";
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="codigo" class=" text-dark font-weight-bold"><i class="fas fa-barcode"></i> Código de Barras</label>
-                                        <input type="text" placeholder="Ingrese código de barras" name="codigo" id="codigo" class="form-control">
+										<input type="text" readonly="true" value="<?php echo rand(1000000, 9999999); ?>" placeholder="Ingrese código de barras" name="codigo" id="codigo" class="form-control">
                                         <input type="hidden" id="id" name="id">
                                     </div>
                                 </div>
@@ -158,7 +158,7 @@ include_once "includes/header.php";
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="submit" value="Registrar" class="btn btn-primary" id="btnAccion">
+                                    <input type="submit" value="Registrar" class="btn btn-primary" id="btnAccion" href="https://barcode.tec-it.com/barcode.ashx?data=3324343&code=&download=true" target="_blank">
                                     <input type="button" value="Nuevo" onclick="limpiar()" class="btn btn-success" id="btnNuevo">
                                 </div>
                             </div>
