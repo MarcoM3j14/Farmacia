@@ -91,8 +91,8 @@ include_once "includes/header.php";
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="codigo" class=" text-dark font-weight-bold"><i class="fas fa-bars"></i> Código</label>
-										<input type="text" readonly="true" value="<?php echo rand(1000000, 9999999); ?>" placeholder="Ingrese código de barras" name="codigo" id="codigo" class="form-control">
+                                        <label for="codigo" class=" text-dark font-weight-bold">Código</label>
+										<input type="text" readonly="true" value="<?php echo rand(1000000, 9999999); ?>" placeholder="Ingrese código" name="codigo" id="codigo" class="form-control">
                                         <input type="hidden" id="id" name="id">
                                     </div>
                                 </div>
